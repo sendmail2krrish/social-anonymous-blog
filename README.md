@@ -19,6 +19,6 @@ Posts detais page
 ![alt PostDetailsPage](Screenshots/post-details.png)
 
 
-Thanks
-Krishna
-sendmail2krrish@gmail.com
+Thanks,<br />
+Krishna<br />
+<a href="mailto:sendmail2krrish@gmail.com">sendmail2krrish@gmail.com</a>

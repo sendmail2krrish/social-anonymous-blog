@@ -1,5 +1,5 @@
 # Social anonymous blog using MEAN (Mysql, Express js, Angular js & Node js) - (SQL file included)
-This is a anonymous blog, where user can post without login & submit their comment on post.
+This is a anonymous blog, where the user can post without login & submit their comment on the post.
 
 # Features
 

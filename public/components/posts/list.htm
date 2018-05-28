@@ -1,0 +1,70 @@
+<h2 class="text-center">Anonymous Blog</h2>
+<p class="text-center">It's a social blog, where every can post anonymously. Also, they can comment on other post.</p>
+<hr>
+
+<div class="row">
+  <div class="col-md-12" ng-controller="postForm">
+      <input type="text" ng-model="posttitle" placeholder="Enter you title" />
+      <div class="editor">
+          <button data-action="bold" title="Bold"><i class="fa fa-bold"></i></button>
+          <button data-action="italic" title="Italic"><i class="fa fa-italic"></i></button>
+          <button data-action="underline" title="Underline"><i class="fa fa-underline"></i></button>
+          <div class="divider"></div>
+          <button data-action="justifyLeft" title="Align Left"><i class="fa fa-align-left"></i></button>
+          <button data-action="justifyCenter" title="Align Center"><i class="fa fa-align-center"></i></button>
+          <button data-action="justifyRight" title="Align Right"><i class="fa fa-align-right"></i></button>
+          <button data-action="justifyFull" title="Justify"><i class="fa fa-align-justify"></i></button>
+          <div class="divider"></div>
+          <button data-action="insertUnorderedList" title="Bullet List"><i class="fa fa-list-ul"></i></button>
+          <button data-action="insertOrderedList" title="Numbered List"><i class="fa fa-list-ol"></i></button>
+          <div class="divider"></div>
+          <select title="Font Family" data-action="fontName">
+            <option selected="selected" disabled="disabled">Font Family</option>
+            <option value="arial">Arial</option>
+            <option value="sans-serif">Sans Serif</option>
+            <option value="georgia">Georgia   </option>
+            <option value="impact">Impact</option>
+            <option value="roboto">Roboto</option>
+            <option value="verdana">Verdana</option>
+          </select>
+          <select title="Font Size" data-action="fontSize">
+            <option value="1">10px</option>
+            <option value="2">12px</option>
+            <option value="3">14px</option>
+            <option value="4">16px</option>
+            <option value="5">18px</option>
+            <option value="6">21px</option>
+            <option value="7">26px</option>
+          </select>
+          <select title="Format" data-action="formatBlock">
+            <option selected="selected" disabled="disabled">Formatting</option>
+            <option value="h1">Heading 1</option>
+            <option value="h2">Heading 2</option>
+            <option value="h3">Heading 3</option>
+            <option value="p">Paragraph</option>
+          </select>
+          <div class="divider"></div>
+          <button data-action="createLink" title="Insert Link"><i class="fa fa-link"></i></button>
+          <button data-action="insertImage" title="Insert Image"><i class="fa fa-image"></i></button>
+          <button data-action="insertHorizontalRule" title="Insert Horizontal Rule">-</button>
+          <div class="divider"></div>
+          <button data-action="undo" title="Undo"><i class="fa fa-undo"></i></button>
+          <button data-action="redo" title="Redo"><i class="fa fa-repeat"></i></button>
+          <button data-action="removeFormat" title="Remove Formatting"><i class="fa fa-eraser"></i></button>
+          <button data-action="delete" title="Delete"><i class="fa fa-trash"></i></button>
+      </div>
+      <div id="document" contenteditable="true"></div>
+      <button type="button" class="btn float-right" ng-click="submitPost()">Post</button>
+      <div class="clearfix"></div>
+      <h3 style="margin-top: 30px;" class="text-center">List of posts</h3>
+      <hr>
+  </div>
+
+  <!-- posts -->
+  <div class="col-md-6" ng-repeat="post in posts" style="margin: 10px 0;">
+    <div ng-include="'components/post/post.htm'"></div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="vendor/script.js"></script>

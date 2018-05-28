@@ -1,0 +1,31 @@
+<h2 class="text-center"><a href="#!" style="color: #20C20E;">Anonymous Blog</a></h2>
+<p class="text-center">It's a social blog, where every can post anonymously. Also, they can comment on other post.</p>
+<hr>
+
+<div class="row">
+  <!-- posts -->
+  <div class="col-md-12" ng-repeat="post in posts" style="margin: 10px 0;">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ post.post_title }}</h4>
+        <div>{{ post.post_content }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comments -->
+  <div class="col-md-12">
+    <div class="form-group">
+      <input type="text" placeholder="Enter your comment..." ng-model="cmntcontent">
+      <button type="button" class="btn float-right" ng-click="submitComment()">Submit</button>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <h3>Comments</h3>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="comment in comments"><strong>{{ comment.created_at }}:</strong><br>{{ comment.cmnt_content }}</li>
+    </ul>
+  </div>
+</div>

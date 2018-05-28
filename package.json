@@ -1,0 +1,20 @@
+{
+  "name": "social-anonymous-blog",
+  "version": "1.0.0",
+  "description": "Social anonymous blog using MEAN (Mysql, Express js, Angular js & Node js)",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,css,ejs,json index.js"
+  },
+  "author": "Krishna Paul",
+  "license": "MIT License",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mysql": "^2.15.0",
+    "reload": "^2.2.2"
+  }
+}

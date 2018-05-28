@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{ post.post_title }}</h4>
+    <div>{{ post.post_content | limitTo: 100 }}...</div>
+    <a href="#!pid-{{ post.post_id }}/{{ post.post_title.split(' ').join('-') | lowercase }}" class="card-link text-body float-right"><strong>Read more</strong></a>
+    <div class="clearfix"></div>
+  </div>
+</div>
